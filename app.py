@@ -28,7 +28,7 @@ def indexApi():
 def classify():
     if 'image' in request.files:
         file = request.files['image']
-        if file.filename != '':
+        if file.filename != '' and file.filename.rsplit('.', 1)[1].lower() in ['jpg', 'png', 'jpeg']:
             print(file)
             new_filename = uuid.uuid4().hex + '.'+file.filename.rsplit('.', 1)[1].lower()
             file_path = os.path.join(app.config['UPLOAD_FOLDER'], new_filename)
@@ -44,7 +44,15 @@ def classify():
 
             classification['confident_score'] = float(classification['confident_score'])
 
-            return jsonify(classification)
+            return jsonify(classification), 201
+        else:
+            return jsonify({
+                'error' : 'File extention is not allowed'
+            }), 400
+    else:
+        return jsonify({
+            'error' : 'Image not found'
+        }),404
 
 
 

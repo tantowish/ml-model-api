@@ -1,0 +1,6 @@
+Flask==3.0.0
+uuid==1.30
+keras==2.15.0
+numpy==1.23.5
+tensorflow==2.15.0
+Pillow==9.5.0
