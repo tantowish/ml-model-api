@@ -1,0 +1,5 @@
+0 Karies dengan Kavitas
+1 Karies Email tanpa Kavitas
+2 Gigi Sehat Tanpa Karies
+3 Atrisi, Abrasi, Erosi
+4 Perubahan Warna, Karang Gigi dan Plak
