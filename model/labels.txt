@@ -1,5 +1,5 @@
-0 Karies dengan Kavitas
-1 Karies Email tanpa Kavitas
-2 Gigi Sehat Tanpa Karies
-3 Atrisi, Abrasi, Erosi
-4 Perubahan Warna, Karang Gigi dan Plak
+0 Caries with Cavities
+1 Caries Email without Cavities
+2 Healthy Teeth Without Cavities
+3 Attrition, Abrasion, Erosion
+4 Discoloration, Tartar, and Plaque
