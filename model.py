@@ -7,10 +7,10 @@ def classify(image_path):
     np.set_printoptions(suppress=True)
 
     # Load the model
-    model = load_model(".\model\keras_Model.h5", compile=False)
+    model = load_model(r"./model/keras_Model.h5", compile=False)
 
     # Load the labels
-    class_names = open(".\model\labels.txt", "r").readlines()
+    class_names = open(r"./model/labels.txt", "r").readlines()
 
     # Create the array of the right shape to feed into the keras model
     # The 'length' or number of images you can put into the array is
@@ -18,7 +18,7 @@ def classify(image_path):
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
     # Replace this with the path to your image
-    image = Image.open('.\static\img\\'+image_path).convert("RGB")
+    image = Image.open(f"./static/img/{image_path}").convert("RGB")
 
     # resizing the image to be at least 224x224 and then cropping from the center
     size = (224, 224)
