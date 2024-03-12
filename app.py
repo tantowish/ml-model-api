@@ -11,7 +11,9 @@ app.secret_key = '@123'
 
 @app.route('/')
 def index():
-    return 'Hello World'
+    return jsonify({
+        'message': 'Hello World'
+    })
 
 @app.route('/img/<filename>')
 def serve_image(filename):
